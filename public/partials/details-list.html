@@ -1,0 +1,48 @@
+<img data-ng-src="{{mainImageUrl}}" class="phone">
+
+<h1>{{details.name}}</h1>
+
+<p>{{details.description}}</p>
+
+<a href="#/main">Back to Home</a>
+
+<ul class="phone-thumbs">
+  <li data-ng-repeat="img in details.images">
+    <img data-ng-src="{{img}}" data-ng-click="setImage(img)">
+  </li>
+</ul>
+
+<button data-ng-click="justinCustomFunction(details.phoneId)">What is my phoneId?</button>
+
+<ul class="specs">
+  <li>
+    <span>Connectivity</span>
+    <dl>
+      <dt>Network Support</dt>
+      <dd>{{details.cell}}</dd>
+      <dt>WiFi</dt>
+      <dd>{{details.wifi}}</dd>
+      <dt>Bluetooth</dt>
+      <dd>{{details.bluetooth}}</dd>
+      <dt>Infrared</dt>
+      <dd>{{details.infrared | checkmark}}</dd>
+      <dt>GPS</dt>
+      <dd>{{details.gps | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Display</span>
+    <dl>
+      <dt>Screen size</dt>
+      <dd>{{details.screenSize}}</dd>
+      <dt>Screen resolution</dt>
+      <dd>{{details.screenResolution}}</dd>
+      <dt>Touch screen</dt>
+      <dd>{{details.touchScreen | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Additional Features</span>
+    <p>{{details.additionalFeatures}}</p>
+  </li>
+</ul>

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+	  
+	  Search: <input data-ng-model="query">
+      Sort by:
+      <select data-ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+	  
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+	  <p>This is showing the details of the main page (main-list.html)</p>
+      <ul class="records">
+        <li data-ng-repeat="record in records | filter:query | orderBy:orderProp" >
+          <img data-ng-src="{{record.imageUrl}}">
+          <a href="#/details/{{record.phoneId}}">{{ record.name }}</a>
+          <p>{{record.description}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
