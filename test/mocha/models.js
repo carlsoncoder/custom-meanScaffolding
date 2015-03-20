@@ -1,7 +1,6 @@
 'use strict';
 
 /* Module dependencies */
-var should = require('should')
 var mongoose = require('mongoose');
 var Phone = mongoose.model('phones');
 var PhoneDetail = mongoose.model('phoneDetails');

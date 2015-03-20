@@ -8,8 +8,8 @@ for (var i = 0; i < dbs.length; i++)
 {
     var db = conn.getDB(dbs[i]);
 
-    db.phones.remove();
-    db.phoneDetails.remove();
+    db.phones.remove({});
+    db.phoneDetails.remove({});
 
     db.phones.insert(
     [

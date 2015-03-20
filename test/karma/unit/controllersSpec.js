@@ -42,7 +42,7 @@ describe('MyAngularApp controllers', function() {
           return {
             name: 'dell-venue-7',
                 images: ['image/url1.png', 'image/url2.png']
-          }
+          };
         };
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $routeParams, $controller) {
